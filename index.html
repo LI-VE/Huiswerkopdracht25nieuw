@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#knop").click(function () {
+                var naam = $("#idTekstveld_naam").val();
+                var gerecht1 = $("#idgerecht_vrijdagavond").val();
+                var gerecht2 = $("#idgerecht_zaterdagavond").val();
+                var lunch1 = $("#idLunch_zaterdag").val();
+                var lunch2 = $("#idLunch_zondag").val();
+                window.alert("Bedankt voor het doorgeven, " + naam + "! We geven door dat je vrijdagavond graag een " + gerecht1 + "gerecht wilt en dat je zaterdagavond kiest voor een " + gerecht2 + "gerecht bij het diner. Voor het 12-uurtje op zaterdag kies je voor de " + lunch1 + " en zondag eet je " + lunch2 + " mee.");
+
+            });
+        });
+    </script>
+    <style>
+        body {
+            background-color: rgb(253, 215, 215)
+        }
+
+        tbody {
+            background-color: rgb(175, 140, 140);
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+
+        h1 {
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+
+        p {
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+    </style>
+    <title>Huiswerkopdracht Javascript en jQuery</title>
+</head>
+
+<body>
+    <header></header>
+    <h1>Weekendje weg Apotheek de Klipper</h1>
+    <p>Geef hieronder aan wat je per dag wilt eten en of je zondag wel of niet mee eet.</p>
+    <form>
+        <table>
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <td><b>Wat is je naam?</b></td>
+                    <td><input type="text" name="naam" id="idTekstveld_naam" placeholder="vul hier je naam in">
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Diner vrijdagavond: vis, vlees of vega?</b></td>
+                    <td><input type="text" name="gerechtvrijdagavond" id="idgerecht_vrijdagavond"
+                            placeholder="vis/vlees/vega">
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Diner zaterdagavond: vis, vlees of vega? </b></td>
+                    <td>
+                        <input type="text" name="gerechtzaterdagavond" id="idgerecht_zaterdagavond"
+                            placeholder="vis/vlees/vega">
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Lunch zaterdagmiddag "12-uurtje" met soep, brood met parmaham en een garnalen- of
+                            rundvleeskroket?</b></td>
+                    <td>
+                        <input type="text" name="lunchzaterdag" id="idLunch_zaterdag"
+                            placeholder="garnalenkroket/rundvleeskroket">
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Eet je zondagmiddag met de lunch om 14:00 uur wel of niet mee?</b></td>
+                    <td><input type="text" name="lunchzondag" id="idLunch_zondag" placeholder="wel/niet">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <input id="knop" name="knop" type="button" value="Verzend">
+    </form>
+    <noscript>Om deze website optimaal te kunnen gebruiken is het noodzakelijk om Javascript te activeren.</noscript>
+    <footer></footer>
+
+</html>
